@@ -25,7 +25,7 @@ class NonDesktopXPicker extends XPicker {
     mobileOptions ??= PickImageMobileOptions();
 
     if (type == MediaType.BOTH) {
-      print("[XPicker.pickMedia] mobile or web doesn't support MediaType.BOTH");
+      print("[XPicker.pickMedia] mobile doesn't support MediaType.BOTH");
       type = MediaType.IMAGE;
     }
 

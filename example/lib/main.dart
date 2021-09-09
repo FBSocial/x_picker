@@ -30,7 +30,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  XPicker xPicker = XPicker.fromPlatform();
+  XPicker xPicker = XPicker.instance;
 
   ValueNotifier<List<XFile>> images = ValueNotifier([]);
 

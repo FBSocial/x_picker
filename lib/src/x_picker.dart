@@ -47,7 +47,12 @@ enum MediaType {
 }
 
 abstract class XPicker {
+  static late XPicker instance = XPicker.fromPlatform();
+
   static fromPlatform() {
+    // web 使用 FilePicker，因为 imagePicker 的 web 版本无法同时选择图片和媒体
+    if (kIsWeb) return DesktopXPicker();
+
     if (kIsWeb || Platform.isAndroid || Platform.isIOS) {
       return NonDesktopXPicker();
     }
