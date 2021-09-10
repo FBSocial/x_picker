@@ -56,7 +56,7 @@ class DesktopXPicker extends XPicker {
       // web 暂不支持 media 类型
       type: (kIsWeb && fileType == FileType.media) ? FileType.custom : fileType,
       // 仅 web 生效
-      allowedExtensions: [
+      allowedExtensions: (kIsWeb && fileType == FileType.media) ? [
         "jpg",
         "png",
         "gif",
@@ -69,7 +69,7 @@ class DesktopXPicker extends XPicker {
         "rmvb",
         "mov",
         "wmv"
-      ],
+      ] : null,
     );
 
     if (result != null) {
