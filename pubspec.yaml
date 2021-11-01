@@ -8,12 +8,12 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  cross_file: ^0.3.1+4
-  file_picker: ^4.0.1
+  cross_file: ^0.3.2
+  file_picker: ^4.2.0
   flutter:
     sdk: flutter
   image_picker: ^0.8.4
-  mime: ^1.0.0
+  mime: ^1.0.1
 
 dev_dependencies:
   flutter_test:

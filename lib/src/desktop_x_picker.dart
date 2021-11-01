@@ -82,7 +82,7 @@ class DesktopXPicker extends XPicker {
           mimeType: lookupMimeType(file.name),
         );
       }
-      final path = result.files.single.path;
+      final path = result.files.single.path!;
       return XFile(path, mimeType: lookupMimeType(path));
     } else {
       return null;
